@@ -1,0 +1,10 @@
+<section class="grid gap-4">
+  @for (presentation of presentations(); track presentation.id) {
+    <app-presentation-card [presentation]="presentation" />
+  } @empty {
+    <p class="rounded-lg border border-dashed border-slate-300 p-6 text-center text-slate-600">
+      ยังไม่มี presentation ในรายการ
+    </p>
+  }
+</section>
+
